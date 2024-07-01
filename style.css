@@ -1,63 +1,767 @@
-/* main menu */
-li{
-    list-style: none;
-}
-a,a:hover{
-    text-decoration: none;
-}
-.main-menu{
-    height: 70px;
-    background-color: #f2f7fb;
-    font-family: vazir;
-    z-index: 999;
-}
-.main-menu .menu-items ul li{
-    display: inline-block;
-    margin-left: 12px;
-    position: relative;
-}
-.menu-items{
-    z-index: 999;
-}
-.main-menu .menu-items ul li a {
-    display: inline-block;
-    padding: 25px 0;
-    color: #555;
-}
-.main-menu .menu-items ul li a:hover{
-    color: #000;
-}
-.main-menu .menu-items ul li > ul {
-    position: absolute;
-    width: 200px;
-    background-color: #f2f7fb;
-    right: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-.main-menu .menu-items ul li:hover > ul{
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s ease;
-    padding: 10px;
-    z-index: 999;
-}
-.main-menu .menu-items ul li ul li{
-    display: block;
-    width: 100%;
-}
-.main-menu .menu-items ul li ul li a {
-    display: block;
-    padding: 10px 12px 10px 12px;
-    
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%
 }
 
-.main-menu .menu-items ul li ul li ul {
-    top: 0;
-    right: 100%;
+body {
+    margin: 0
 }
-.fonttach{
-    width: 10px;
-    height: 10px;
+
+details,
+main {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+img {
+    border-style: none
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+    -webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+figure {
+    margin: 0;
+}
+
+fieldset {
+    padding: .35em .75em .625em
+}
+
+legend {
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    white-space: normal
+}
+
+progress {
+    vertical-align: baseline
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox],
+[type=radio],
+legend {
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+summary {
+    display: list-item
+}
+
+[hidden],
+template {
+    display: none
+}
+
+* {
+    box-sizing: border-box
+}
+
+img {
+    max-width: 100%
+}
+
+body,
+button,
+input {
+    font-family: 'sahel', sans-serif, tahoma
+}
+
+body {
+    line-height: 1.8;
+    font-size: 10pt;
+    direction: rtl;
+    color: #111
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+svg {
+    display: block;
+    width: 24px;
+    height: 24px
+}
+
+nav {
+    width: 100%;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.Box {
+    max-width: 768px;
+    margin: auto
+}
+
+nav .Box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0
+}
+
+nav ul li {
+    margin-left: 20px
+}
+
+nav ul li:last-of-type {
+    margin-left: 0
+}
+
+.Svg svg {
+    height: auto;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    display: block
+}
+
+header {
+    margin-top: 64px;
+    padding: 100px 20px 20px 20px
+}
+
+header .Box {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    flex-wrap: wrap
+}
+
+.InfoImg {
+    display: block;
+    margin-left: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+    overflow: hidden
+}
+
+.InfoImg img {
+    display: block;
+    width: 150px;
+    width: 150px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: .3s cubic-bezier(.075, .82, .165, 1) transform;
+    -webkit-transition: .3s cubic-bezier(.075, .82, .165, 1) transform;
+    -moz-transition: .3s cubic-bezier(.075, .82, .165, 1) transform;
+    -ms-transition: .3s cubic-bezier(.075, .82, .165, 1) transform;
+    -o-transition: .3s cubic-bezier(.075, .82, .165, 1) transform
+}
+
+.InfoImg:hover img {
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15)
+}
+
+.Content {
+    padding: 20px
+}
+
+.Content .Box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 20px;
+    z-index: 2;
+    position: relative
+}
+
+.PostBox {
+    margin-bottom: 20px;
+    color: #111;
+    padding-bottom: 20px;
+}
+
+.PostBoxTitle {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.PostInfo {
+    font-size: 9pt;
+    margin-bottom: 10px
+}
+
+.Author {
+    font-weight: 700;
+}
+
+.PostTag {
+    margin-top: 10px;
+    font-size: 8pt
+}
+
+.PostTag a {
+    font-weight: 700
+}
+
+.PostFooter {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.PostFooter2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Clear {
+    clear: both
+}
+
+.PostFooter a {
+    padding: 5px 15px;
+    color: #ffffff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-weight: bold;
+}
+
+.PostFooter2>span {
+    margin-right: 10px;
+}
+
+.PostFooter2>span a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.PostFooter2>span a svg {
+    margin: 5px 0 0 10px;
+}
+
+.likeBtn.liked svg {
+    fill: currentColor;
+}
+
+.Pagination a {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px
+}
+
+.Pagination {
+    padding-bottom: 20px
+}
+
+.Prevoius {
+    float: right
+}
+
+.Next {
+    float: left
+}
+
+.Code {
+    text-align: center;
+    padding: 20px
+}
+
+.SidebarOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    pointer-events: none
+}
+
+.SidebarOverlay.set {
+    opacity: 1;
+    pointer-events: all
+}
+
+.Sidebar {
+    position: fixed;
+    top: 64px;
+    bottom: 0;
+    max-width: 320px;
+    width: 100%;
+    background-color: #ff8383;
+    z-index: 4;
+    padding: 20px;
+    overflow: auto;
+    left: -320px;
+    transition: .3s cubic-bezier(.075, .82, .165, 1);
+    -webkit-transition: .3s cubic-bezier(.075, .82, .165, 1);
+    -moz-transition: .3s cubic-bezier(.075, .82, .165, 1);
+    -ms-transition: .3s cubic-bezier(.075, .82, .165, 1);
+    -o-transition: .3s cubic-bezier(.075, .82, .165, 1)
+}
+
+.Sidebar.set {
+    left: 0
+}
+
+.SideBox h6 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: inherit;
+}
+
+.SideBox {
+    margin-bottom: 40px
+}
+
+.SideBox ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+footer {
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    font-size: 10pt;
+    font-weight: 700
+}
+
+footer h2 {
+    display: inline-block;
+    font-weight: inherit;
+    font-size: inherit
+}
+
+.SvgPattern {
+    position: relative
+}
+
+.SvgPattern::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.PostText img, .PostText video {
+    height: auto;
+    max-width: 100%;
+}
+
+.PostText {
+    overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 50px 20px 20px 20px;
+    }
+
+    .Content {
+        padding: 40px 10px;
+    }
+}
+
+
+.PostCommentsForm {
+    margin-top: 20px;
+}
+
+/* SearchBar */
+
+.searchBar {
+    opacity: 0%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    max-width: 100%;
+    height: 70px;
+    margin-top: -70px;
+    transition: 0.3s;
+}
+.searchBar.open {
+    opacity: 100%;
+    height: 70px;
+    margin-top: 0px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px #00000055;
+    z-index: 10;
+}
+.searchBar .overlay {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 0vh;
+    background-color: #00000077;
+    opacity: 0%;
+    transition: top 0.3s;
+}
+.searchBar.open .overlay {
+    top: 70px;
+    opacity: 100%;
+    height: 100vh;
+}
+.searchBar form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchBar .close, .searchBar .submit {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    background-color: #ffffff;
+    transition: 0s;
+}
+.searchBar .close svg, .searchBar .submit svg {
+    width: 32px;
+    height: 32px;
+    fill: #000000aa;
+    cursor: pointer;
+}
+.searchBar input {
+    width: 100%;
+    height: 70px;
+    border: 0;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* PostCommentsBlock */
+
+.PostCommentsBlock a {
+    color: #448aff;
+}
+.PostComments {
+    border-top: solid 1px #0001;
+    text-align: right;
+    overflow: auto;
+}
+.PostCommentsContent {
+    padding: 10px;
+}
+.PostCommentsTop {
+    width: 100%;
+    overflow: auto;
+}
+.PostCommentsImages {
+    width: 50px;
+    overflow: hidden;
+    float: right;
+}
+.PostCommentsImage {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    float: right;
+}
+.PostCommentsXp {
+    height: 20px;
+    width: 20px;
+    margin-top: 20px;
+    margin-right: -15px;
+    float: right;
+}
+.PostCommentsXp[src=""] {
+    display: none;
+}
+.PostCommentsUrl {
+    display: block;
+    font-size: 12px;
+}
+.PostCommentsUrl[href=""] {
+    color: inherit;
+}
+.PostCommentsUrl[href=""]:hover {
+    color: inherit;
+    cursor: inherit;
+}
+.PostCommentsTime {
+    font-size: 12px;
+}
+.PostCommentsReplyBtn {
+    float: left;
+    margin: 10px;
+    cursor: pointer;
+}
+.PostCommentsText {
+    padding: 10px 5px;
+    width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+.PostCommentsReply {
+    margin: 10px;
+    background-color: #0001;
+    border: solid 1px #0001;
+    border-radius: 10px;
+}
+.PostCommentsForm {
+    padding: 10px;
+    border-top: solid 1px #0001;
+}
+.PostCommentsFormFiled {
+    margin: 10px 0;
+}
+.PostCommentsFormFiled input, .PostCommentsFormFiled textarea {
+    direction: rtl;
+    width: 100%;
+    display: block;
+    background-color: #ffffff33;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 15px;
+    line-height: 1.5;
+    color: #212529;
+    resize: none;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.PostCommentsFormFiled input:focus, .PostCommentsFormFiled textarea:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #0d6efd40;
+}
+.PostCommentsFormSubmit {
+    margin: 10px 0;
+}
+.PostCommentsFormSubmit input {
+    width: 150px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #448aff;
+    color: #ffffff;
+    border: none;
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0px 3px 5px -1px #00000022, 0px 6px 10px 0px #00000015, 0px 1px 18px 0px #00000010;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.PostCommentsFormAlertReply, .PostCommentsFormAlertGuest, .PostCommentsFormAlertUser, .PostCommentsFormAlertError, .PostCommentsFormAlertSuccess {
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+.PostCommentsFormAlertReply {
+    display: none;
+    color: #084298;
+    background-color: #cfe2ff;
+    border-color: #b6d4fe;
+}
+.PostCommentsFormAlertReply svg {
+    float: left;
+    fill: #084298;
+    cursor: pointer;
+}
+.PostCommentsFormAlertGuest {
+    color: #084298;
+    background-color: #cfe2ff;
+    border-color: #b6d4fe;
+}
+.PostCommentsFormAlertUser {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+}
+.PostCommentsFormAlertSuccess {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    display: none;
+}
+.PostCommentsFormAlertError {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    display: none;
+}
+.PostCommentPagination {
+    direction: ltr;
+    display: flex;
+    justify-content: space-between;
+}
+.PostCommentNextPage, .PostCommentPreviousPage {
+    border: solid 1px #0001;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.PostCommentNextPage[href=""], .PostCommentPreviousPage[href=""] {
+    display: none;
 }
